@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --primary-color: #8c52ff;
+  --secondary-color: #ffffff;
+  --tertiary-color: #000000;
+}
+
+html {
+  height: 500vh;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1280px;
+  margin: auto;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
