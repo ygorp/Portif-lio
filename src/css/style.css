@@ -33,6 +33,17 @@ html {
   position: fixed;
   top: 0;
   left: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+#header.sticky {
+  background-color: var(--secondary-color);
+  box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px 4%;
+}
+
+#header.sticky nav ul li a {
+  color: var(--tertiary-color);
 }
 
 #header img {
