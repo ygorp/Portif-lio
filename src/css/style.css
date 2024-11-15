@@ -30,21 +30,8 @@ html {
 
 #header {
   width: 100%;
-  padding: 60px 4%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  transition: all 0.3s ease-in-out;
-}
-
-#header.sticky {
-  background-color: var(--secondary-color);
-  box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.1);
-  padding: 20px 4%;
-}
-
-#header.sticky nav ul li a {
-  color: var(--tertiary-color);
+  height: 70px;
+  padding: 20px;
 }
 
 #header img {
@@ -84,23 +71,58 @@ html {
 
 @media (max-width: 600px) {
   #btn-mobile {
+    display: flex;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: .5rem;
+  }
+  #hamburguer {
     display: block;
+    border-top: 2px solid;
+    width: 20px;
+    color: var(--primary-color);
+  }
+  #hamburguer::after, #hamburguer::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-top: 2px solid;
+    color: currentColor;
+    margin-top: 5px;
+    transition: .3s;
+    position: relative;
   }
   #header #menu {
     display: block;
     position: absolute;
     width: 100%;
-    top: 90px;
+    top: 70px;
     right: 0px;
     background-color: var(--tertiary-color);
     transition: .6s;
     z-index: 1000;
     height: 0;
     visibility: hidden;
+    overflow-y: hidden;
   }
   #nav.active #menu {
     height: calc(100vh - 90px);
     visibility: visible;
+    overflow-y: auto;
+  }
+  #nav.active #hamburguer {
+    border-top-color: transparent;
+  }
+  #nav.active #hamburguer::before {
+    transform: rotate(135deg);
+  }
+  #nav.active #hamburguer::after {
+    transform: rotate(-135deg);
+    top: -9px;
   }
   #header #menu a {
     display: block;

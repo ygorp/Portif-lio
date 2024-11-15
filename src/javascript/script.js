@@ -1,8 +1,3 @@
-$(window).on('scroll', function() {
-  let header = $('#header');
-  header.toggleClass('sticky', $(window).scrollTop() > 0);
-});
-
 const btnMobile = document.getElementById('btn-mobile');
 
 function toggleMenu(event) {
